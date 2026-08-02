@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Template Literals</title>
+</head>
+
+<body>
+
+    <div id="output"></div>
+
+    <script>
+
+        const users = [
+            { name: "Alice", age: 53 },
+            { name: "Tim", age: 74 }
+        ];
+
+        function generateTable() {
+
+            const rows = users.map(user => `
+                <tr>
+                    <td>${user.name}</td>
+                    <td>${user.age}</td>
+                </tr>
+            `).join("");
+
+            return `
+                <table>
+                    ${rows}
+                </table>
+            `;
+        }
+
+        document.getElementById("output").innerHTML = generateTable();
+
+    </script>
+
+</body>
+
+</html>
