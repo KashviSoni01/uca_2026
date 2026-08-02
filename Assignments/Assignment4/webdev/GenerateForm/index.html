@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Form</title>
+</head>
+
+<body>
+
+    <div id="form"></div>
+
+    <script>
+
+        const fields = [
+            "First Name",
+            "Last Name",
+            "Email"
+        ];
+
+        function generateForm() {
+
+            const formFields = fields.map(field => `
+                <label>${field}</label>
+                <input type="text">
+            `).join("");
+
+            return formFields;
+        }
+
+        document.getElementById("form").innerHTML = generateForm();
+
+    </script>
+
+</body>
+
+</html>
+
