@@ -21,8 +21,6 @@ public class ClinicAndVillage {
         PriorityQueue<Triplet> pq = new PriorityQueue<>((a, b) -> Double.compare(b.avgLoad, a.avgLoad));
         k-=population.length;
         
-        Arrays.sort(population);
-        if(k==0) return population[population.length-1];
 
         for(int i=0; i<population.length; i++) {
             pq.add(new Triplet(population[i], population[i], 1));
