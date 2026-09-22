@@ -26,7 +26,8 @@ class SearchLL {
                     curr2=curr2.next;
                 }
                 if(curr1==null) return true;
-            } else head2=head2.next;
+            } 
+	    head2=head2.next;
         }
         return false;
     }
